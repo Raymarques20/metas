@@ -13,5 +13,8 @@ for(let i=0;j<botoes.length; i++){
 }
     botoes[i].classList.add("ativo");
     textos[i].classList.add("ativo");
-    contadores[0].textcontext = "Contagem Regressiva";
 
+const contadores = document. querySelectorAll(".contador");
+const tempoObjetivo1 = new Date("2024-12-21T00:00:00");
+let tempoAtual = new Date ()
+contadores[0].textContent = tempoObjetivo1 - tempoAtual;
