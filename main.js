@@ -1,6 +1,7 @@
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo")
 
+const contadores = document.querySelectorAll("contador")
 for(let i=0;j<botoes.length; i++){
     botoes[i].onclick = function(){
         for(let j=0;j<botoes.length;j++){
@@ -11,4 +12,6 @@ for(let i=0;j<botoes.length; i++){
     }
 }
     botoes[i].classList.add("ativo");
-    textos[i].classList.add("ativo")
+    textos[i].classList.add("ativo");
+    contadores[0].textcontext = "Contagem Regressiva";
+
