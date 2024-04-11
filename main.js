@@ -21,7 +21,12 @@ const tempoObjetivo2 = new Date("2023-12-05T00:00:00");
 const tempoObjetivo3 = new Date("2023-12-05T00:00:00");
 const tempoObjetivo4 = new Date("2023-02-05T00:00:00");
 
-cont tempos =[tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4]:
+function atualizaCronometro(){
+    for (let i=0; i<contadores.length;i++){
+        contadores[i].textContent = calculaTempo(tempos[i]);   
+    }
+}
+
 
 contadores[0].textContent = calculaTempo(tempoObjetivo1);
 
@@ -38,7 +43,8 @@ function calculaTempo(tempoObjetivo) {
     horas %= 24;
  
     if(tempoFinal > 0){
- return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+    return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
 }else{
      return " Prazo encerrado";
     }
+}
